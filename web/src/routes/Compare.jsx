@@ -234,8 +234,8 @@ export default function Compare() {
           <h1 className="text-2xl font-bold text-ink leading-snug mb-2">
             Multi-Hazard Risk Assessment of the US High-Voltage Transmission Network
           </h1>
-          <p className="text-sm text-ink-muted">Dennies Bor · George Mason University</p>
-          <p className="text-xs text-ink-muted mt-0.5">PhD Candidate, Earth Systems and Geoinformation Sciences</p>
+          <p className="text-sm text-ink-muted">D. Bor · E. J. Oughton · R. S. Weigel · R. Yang · T. Clower · A. Newman · A.R. Valle</p>
+          <p className="text-xs text-ink-muted mt-0.5">George Mason University · NSF NCAR, Boulder, CO</p>
         </header>
 
         {/* ── Abstract ── */}

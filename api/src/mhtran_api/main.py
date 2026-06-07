@@ -19,6 +19,7 @@ def create_app() -> FastAPI:
         CORSMiddleware,
         allow_origins=[
             "https://mhtran.denniesbor.com",
+            "https://mhtran.denniesbor.me",
             "https://denniesbor.github.io",
             "http://localhost:5173",
         ],

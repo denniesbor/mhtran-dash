@@ -76,12 +76,12 @@ export default function Landing() {
           </span>
         </h1>
 
-        {/* author */}
-        <p className="text-sm mb-1" style={{ color: "#94a3b8" }}>
-          Dennies Bor · George Mason University
+        {/* authors */}
+        <p className="text-sm mb-1 text-center max-w-2xl" style={{ color: "#94a3b8" }}>
+          D. Bor · E. J. Oughton · R. S. Weigel · R. Yang · T. Clower · A. Newman · A.R. Valle
         </p>
         <p className="text-xs mb-6" style={{ color: "rgba(100,116,139,0.75)" }}>
-          PhD Candidate, Earth Systems and Geoinformation Sciences
+          George Mason University · NSF NCAR, Boulder, CO
         </p>
 
         {/* tagline */}
