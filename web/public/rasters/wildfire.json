@@ -1,0 +1,31 @@
+{
+  "hazard": "wildfire",
+  "units": "WHP 2023 continuous score",
+  "vmin": 50.0,
+  "vmax": 18176.0,
+  "colormap": "fire",
+  "source_file": "whp2023_cnt_conus.tif",
+  "norm": "log",
+  "generated_at": "2026-06-07T18:28:24.787658+00:00",
+  "output_width": 1920,
+  "output_height": 1200,
+  "dst_crs": "EPSG:5070",
+  "conus_bbox_epsg5070": [
+    -2409000,
+    276000,
+    2307000,
+    3212000
+  ],
+  "gradient_stops": [
+    "#ffffb2",
+    "#fee382",
+    "#fdc558",
+    "#fda246",
+    "#fa7b35",
+    "#f24c26",
+    "#df2722",
+    "#c20525",
+    "#96001a",
+    "#67000d"
+  ]
+}

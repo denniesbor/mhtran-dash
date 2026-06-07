@@ -1,0 +1,31 @@
+{
+  "hazard": "seismic",
+  "units": "SA(0.2s) in g, 2%/50yr (2475-yr RP), B/C site class",
+  "vmin": 0.01,
+  "vmax": 1.0,
+  "colormap": "seis",
+  "source_file": "US_SA0P2_2Pct50Yrs_BC_poly.shp",
+  "norm": "log",
+  "generated_at": "2026-06-07T18:28:27.832201+00:00",
+  "output_width": 1920,
+  "output_height": 1200,
+  "dst_crs": "EPSG:5070",
+  "conus_bbox_epsg5070": [
+    -2409000,
+    276000,
+    2307000,
+    3212000
+  ],
+  "gradient_stops": [
+    "#ffffff",
+    "#fef4e6",
+    "#feeace",
+    "#fdd9b1",
+    "#fdc593",
+    "#f7a171",
+    "#eb6f4e",
+    "#d6412c",
+    "#aa2016",
+    "#7f0000"
+  ]
+}

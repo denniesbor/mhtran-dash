@@ -1,21 +1,24 @@
-# Proxmox host nginx — exposes the mhtran API at mhtran.denniesbor.com/api/
-# Frontend is served by GitHub Pages at the same domain via CNAME.
+# EC2 nginx — mhtran.denniesbor.com
 #
-# Deploy:
+# - /api/ and /health|ready  → mhtran-api container on Proxmox VM (via WireGuard VPN)
+# - everything else          → GitHub Pages (denniesbor.github.io/mhtran-dash)
+#
+# Deploy on EC2:
 #   sudo cp docker/nginx/mhtran.denniesbor.com /etc/nginx/sites-available/mhtran.denniesbor.com
 #   sudo ln -s /etc/nginx/sites-available/mhtran.denniesbor.com /etc/nginx/sites-enabled/
 #   sudo nginx -t && sudo systemctl reload nginx
 #   sudo certbot --nginx -d mhtran.denniesbor.com
 #
-# MHTRAN_PORT in .env must match the port below (default 8036).
+# MHTRAN_PORT must match the port exposed by compose.prod.proxmox.yml (default 8036).
+# Proxmox VPN IP is 10.8.0.50 — adjust if the lease changes.
 
 server {
     listen 80;
     server_name mhtran.denniesbor.com;
 
-    # API — proxy to the mhtran-api container
+    # API — proxy to the mhtran-api container on Proxmox via VPN
     location /api/ {
-        proxy_pass         http://127.0.0.1:8036/api/;
+        proxy_pass         http://10.8.0.50:8036/api/;
         proxy_http_version 1.1;
         proxy_set_header   Host              $host;
         proxy_set_header   X-Real-IP         $remote_addr;
@@ -24,14 +27,20 @@ server {
     }
 
     location ~ ^/(health|ready)$ {
-        proxy_pass         http://127.0.0.1:8036$request_uri;
+        proxy_pass         http://10.8.0.50:8036$request_uri;
         proxy_http_version 1.1;
         proxy_set_header   Host $host;
     }
 
-    # Everything else is served by GitHub Pages (CNAME handles it).
-    # This block should not be reached in normal operation.
+    # Static frontend — proxy to GitHub Pages
+    # Requests for /rasters/, /assets/, etc. are forwarded to the Pages CDN.
     location / {
-        return 404;
+        proxy_pass              https://denniesbor.github.io/mhtran-dash/;
+        proxy_ssl_server_name   on;
+        proxy_set_header        Host              denniesbor.github.io;
+        proxy_set_header        X-Real-IP         $remote_addr;
+        proxy_set_header        X-Forwarded-For   $proxy_add_x_forwarded_for;
+        proxy_set_header        X-Forwarded-Proto $scheme;
+        proxy_redirect          off;
     }
 }

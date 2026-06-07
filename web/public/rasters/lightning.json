@@ -1,0 +1,31 @@
+{
+  "hazard": "lightning",
+  "units": "flashes/km\u00b2/yr",
+  "vmin": 0.0,
+  "vmax": 33.0,
+  "colormap": "lightning",
+  "source_file": "lightning_annual_rate_4326.tif",
+  "norm": "linear",
+  "generated_at": "2026-06-07T18:28:05.200638+00:00",
+  "output_width": 1920,
+  "output_height": 1200,
+  "dst_crs": "EPSG:5070",
+  "conus_bbox_epsg5070": [
+    -2409000,
+    276000,
+    2307000,
+    3212000
+  ],
+  "gradient_stops": [
+    "#f7f4bc",
+    "#faeaa4",
+    "#fedf8a",
+    "#fece65",
+    "#feba46",
+    "#fea231",
+    "#f88b22",
+    "#ed7416",
+    "#c0510c",
+    "#8c2d04"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "hazard": "landslide",
+  "units": "susceptibility index (0\u201381)",
+  "vmin": 0.0,
+  "vmax": 81.0,
+  "colormap": "landslide",
+  "source_file": "lw_conus.tif",
+  "norm": "linear",
+  "generated_at": "2026-06-07T18:28:21.956770+00:00",
+  "output_width": 1920,
+  "output_height": 1200,
+  "dst_crs": "EPSG:5070",
+  "conus_bbox_epsg5070": [
+    -2409000,
+    276000,
+    2307000,
+    3212000
+  ],
+  "gradient_stops": [
+    "#f5f5f5",
+    "#e2f1be",
+    "#cbe99c",
+    "#addd8e",
+    "#8acd80",
+    "#5fba6c",
+    "#30a354",
+    "#0f7a40",
+    "#1a5124",
+    "#4d2600"
+  ]
+}

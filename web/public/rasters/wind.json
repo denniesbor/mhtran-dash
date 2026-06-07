@@ -1,0 +1,31 @@
+{
+  "hazard": "wind",
+  "units": "max TC wind speed (mph)",
+  "vmin": 74.0,
+  "vmax": 160.0,
+  "colormap": "wind",
+  "source_file": "hurr_maxwind_10km.tif",
+  "norm": "linear",
+  "generated_at": "2026-06-07T18:28:25.067135+00:00",
+  "output_width": 1920,
+  "output_height": 1200,
+  "dst_crs": "EPSG:5070",
+  "conus_bbox_epsg5070": [
+    -2409000,
+    276000,
+    2307000,
+    3212000
+  ],
+  "gradient_stops": [
+    "#f7fbff",
+    "#dce9f6",
+    "#bdd6ec",
+    "#89bdde",
+    "#5ba0ce",
+    "#307ebc",
+    "#1862aa",
+    "#0a4997",
+    "#04258f",
+    "#00008b"
+  ]
+}

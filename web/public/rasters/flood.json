@@ -1,0 +1,31 @@
+{
+  "hazard": "flood",
+  "units": "depth (m), 100-yr return period",
+  "vmin": 0.1,
+  "vmax": 30.0,
+  "colormap": "flood_purple",
+  "source_file": "inunriver_historical_000000000WATCH_1980_rp00100.tif",
+  "norm": "log",
+  "generated_at": "2026-06-07T18:28:07.511717+00:00",
+  "output_width": 1920,
+  "output_height": 1200,
+  "dst_crs": "EPSG:5070",
+  "conus_bbox_epsg5070": [
+    -2409000,
+    276000,
+    2307000,
+    3212000
+  ],
+  "gradient_stops": [
+    "#deebf7",
+    "#dce3f1",
+    "#dadcec",
+    "#c6c4df",
+    "#aba8cf",
+    "#9289bf",
+    "#7b69af",
+    "#64479e",
+    "#51238d",
+    "#3f007d"
+  ]
+}

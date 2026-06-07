@@ -1,0 +1,31 @@
+{
+  "hazard": "hail",
+  "units": "annual hail events/km\u00b2",
+  "vmin": 0.01,
+  "vmax": 3.0,
+  "colormap": "hail",
+  "source_file": "hail_annual_rate_10km.tif",
+  "norm": "log",
+  "generated_at": "2026-06-07T18:28:08.606525+00:00",
+  "output_width": 1920,
+  "output_height": 1200,
+  "dst_crs": "EPSG:5070",
+  "conus_bbox_epsg5070": [
+    -2409000,
+    276000,
+    2307000,
+    3212000
+  ],
+  "gradient_stops": [
+    "#f7fbff",
+    "#e1ecf7",
+    "#cbdef0",
+    "#a7cbe6",
+    "#7fb8db",
+    "#5aa0ce",
+    "#3985c0",
+    "#1d6bb0",
+    "#1258a2",
+    "#084594"
+  ]
+}

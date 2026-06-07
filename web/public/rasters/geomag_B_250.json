@@ -1,0 +1,33 @@
+{
+  "hazard": "geomag",
+  "field": "B",
+  "return_period_yr": 250,
+  "units": "magnetic field (nT), 250-yr RP",
+  "vmin": 200.0,
+  "vmax": 2500.0,
+  "colormap": "geomag",
+  "source_file": "geomagnetic_data_return_periods.h5",
+  "norm": "log",
+  "generated_at": "2026-06-07T18:28:36.003739+00:00",
+  "output_width": 1920,
+  "output_height": 1200,
+  "dst_crs": "EPSG:5070",
+  "conus_bbox_epsg5070": [
+    -2409000,
+    276000,
+    2307000,
+    3212000
+  ],
+  "gradient_stops": [
+    "#140d35",
+    "#370f6c",
+    "#5e177f",
+    "#852681",
+    "#ac337b",
+    "#d3426d",
+    "#f0605d",
+    "#fc8e63",
+    "#febb80",
+    "#fce6a8"
+  ]
+}

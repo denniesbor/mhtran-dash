@@ -13,6 +13,7 @@ api/uv.lock.bak
 .env
 .env.*
 !.env.example
+!web/.env.production
 
 # Node
 node_modules/
@@ -35,9 +36,7 @@ Thumbs.db
 *.log
 .postgres-data/
 
-# Rasters — large generated files, rebuilt from source data
-web/public/rasters/*.png
-web/public/rasters/*.json
+# Rasters: committed — needed by GitHub Pages build (total ~8.4 MB, all under 3 MB each)
 
 # Backups
 *.bak
