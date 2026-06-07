@@ -1,0 +1,14 @@
+services:
+  db:
+    ports:
+      - "5435:5432"
+
+  api:
+    ports:
+      - "8035:8000"
+    volumes:
+      - ./api:/app
+      - /data/archives/nfs/multi-hazard:/data/multi-hazard:ro
+    command: uv run uvicorn mhtran_api.main:app --host 0.0.0.0 --port 8000 --reload
+    environment:
+      - MHTRAN_ENV=dev

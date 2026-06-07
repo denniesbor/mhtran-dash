@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+dist/
+build/
+.ruff_cache/
+.pytest_cache/
+api/uv.lock.bak
+
+# Environment — never commit secrets
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules/
+web/dist/
+web/node_modules/
+
+# Agent / handoff context files
+._CLAUDE.md
+CLAUDE.md
+AGENTS.md
+HANDOFF*.md
+docs/
+
+# OS
+.DS_Store
+._*
+Thumbs.db
+
+# Docker volumes & runtime data
+*.log
+.postgres-data/
+
+# Rasters — large generated files, rebuilt from source data
+web/public/rasters/*.png
+web/public/rasters/*.json
+
+# Backups
+*.bak
+
+# Root-level stray lockfile (not a real package)
+/package-lock.json
+/package.json

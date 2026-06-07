@@ -1,0 +1,13 @@
+# Proxmox production overrides — db + api only.
+# Frontend is served from GitHub Pages (mhtran.denniesbor.com).
+# Usage: make prod-proxmox
+
+services:
+  api:
+    ports:
+      - "${MHTRAN_HOST:-127.0.0.1}:${MHTRAN_PORT:-8036}:8000"
+    volumes:
+      - /data/archives/nfs/multi-hazard:/data/multi-hazard:ro
+    command: uvicorn mhtran_api.main:app --host 0.0.0.0 --port 8000 --workers 4
+    environment:
+      - MHTRAN_ENV=prod

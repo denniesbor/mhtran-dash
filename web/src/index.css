@@ -1,0 +1,48 @@
+/*
+ * Role: Tailwind entry point and design token definitions.
+ * Author: Dennies Bor
+ * Description: Imports Tailwind v4 and declares dashboard design tokens via
+ *   @theme. The palette is deliberately near-white so the YlOrRd damage-cost
+ *   colour scale reads as scientific signal, not decoration. Tabular figures
+ *   are enabled for consistent numeric column widths.
+ */
+
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("https://rsms.me/inter/font-files/InterVariable.woff2") format("woff2");
+}
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+
+  /* Near-white surface — the map is the visual hierarchy, chrome stays quiet. */
+  --color-surface: #fafafa;
+  --color-surface-raised: #ffffff;
+  --color-surface-inset: #f0f0f0;
+  --color-ink: #1a1a1a;
+  --color-ink-muted: #6b7280;
+  --color-line: #d4d4d4;
+  --color-accent: #2563eb;
+
+  /* Damage cost scale anchors (informational — actual gradient is D3 YlOrRd). */
+  --color-ead-low: #ffffb2;
+  --color-ead-high: #bd0026;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-surface);
+  color: var(--color-ink);
+  font-feature-settings: "tnum";
+}

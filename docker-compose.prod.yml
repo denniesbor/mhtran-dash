@@ -1,0 +1,9 @@
+services:
+  api:
+    ports:
+      - "8035:8000"
+    volumes:
+      - /data/archives/nfs/multi-hazard:/data/multi-hazard:ro
+    command: uvicorn mhtran_api.main:app --host 0.0.0.0 --port 8000 --workers 4
+    environment:
+      - MHTRAN_ENV=prod
